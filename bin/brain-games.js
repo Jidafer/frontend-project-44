@@ -1,1 +1,2 @@
-console.log ('node bin/brain-games.js\nWelcome to the Brain Games!'); 
+import call from '../src/cli.js';
+call ()
