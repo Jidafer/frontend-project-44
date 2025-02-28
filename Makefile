@@ -1,6 +1,11 @@
+
 install: 
 	npm ci;
 	npm install readline-sync;
-brain-games: node bin/brain-games.js
+	chmod +x bin/brain-games.js
+brain-games:
+	node bin/brain-games.js
 make lint: 
 	npx eslint .
+publish: 
+	 npm publish --dry-run
