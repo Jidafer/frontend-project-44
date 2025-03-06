@@ -4,7 +4,8 @@ import run from '../index.js';
 const description = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 const minRange = 0;
-const maxRange = 69696969696969696969696969696969;
+const maxRange = 50;
+
 const calculate = (x, y, operator) => {
   switch (operator) {
     case '+':
@@ -14,15 +15,16 @@ const calculate = (x, y, operator) => {
     case '*':
       return x * y;
     default:
+      throw new Error(`There is no such operator like '${operator}'!`);
   }
 };
 
 const generateRound = () => {
-  const num1 = getRandomNumber(minRange, maxRange);
-  const num2 = getRandomNumber(minRange, maxRange);
+  const number1 = getRandomNumber(minRange, maxRange);
+  const number2 = getRandomNumber(minRange, maxRange);
   const operator = operators[getRandomIndex(operators)];
-  const question = ${num1} ${operator} ${num2};
-  const correctAnswer = calculate(num1, num2, operator).toString();
+  const question = ${number1} ${operator} ${number2};
+  const correctAnswer = calculate(number1, number2, operator).toString();
   return [question, correctAnswer];
 };
 

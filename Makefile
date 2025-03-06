@@ -4,7 +4,9 @@ install:
 	chmod +x bin/brain-games.js
 brain-games:
 	node bin/brain-games.js
- lint: 
+ lint:
 	npx eslint .
 publish: 
 	 npm publish --dry-run
+brain-even : 
+	node bin/brain-even.js
