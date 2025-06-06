@@ -8,7 +8,8 @@ const maxRange = 100;
 const isEven = (number) => (number % 2 === 0);
 
 const generateRound = () => {
-  const number = getRandomNumber(minRange, maxRange);
+  const number1 = getRandomNumber(minRange, maxRange);
+  const number2 = getRandomNumber(minRange, maxRange);
   const question = number.toString();
   const correctAnswer = isEven(number) ? 'yes' : 'no';
   return [question, correctAnswer];
